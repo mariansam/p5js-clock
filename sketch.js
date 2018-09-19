@@ -6,11 +6,13 @@ function setup() {
 function draw() {
     clear();
     translate(width / 2, height / 2);
-    background(220);
+    background(100);
 
+    // create clock background
     fill(20);
     ellipse(0, 0, 240);
 
+    // create points
     stroke(250);
     strokeWeight(2);
 
@@ -19,10 +21,12 @@ function draw() {
         point(a.x, a.y);
     }
 
+    // calculate values
     var sec = { x: cos(second() * 6 - 90) * 100, y: sin(second() * 6 - 90) * 100 };
     var min = { x: cos(minute() * 6 - 90) * 100, y: sin(minute() * 6 - 90) * 100 };
     var hur = { x: cos(hour() * 6 - 90) * 100, y: sin(hour() * 6 - 90) * 100 };
     
+    // draw clock hands
     stroke(255);
     strokeWeight(4);
 
