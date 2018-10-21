@@ -24,8 +24,11 @@ function draw() {
     // calculate values
     var sec = { x: cos(second() * 6 - 90) * 100, y: sin(second() * 6 - 90) * 100 };
     var min = { x: cos(minute() * 6 - 90) * 100, y: sin(minute() * 6 - 90) * 100 };
-    var hur = { x: cos(hour() * 30 - 90) * 100, y: sin(hour() * 6 - 90) * 100 };
-    
+    //var hur = { x: cos(hour() * 30 - 90) * 100, y: sin(hour() * 6 - 90) * 100 };
+
+
+    var hur = { x: cos(hour() * 30 + minute() * 0.5 - 90) * 100, y: sin(hour() * 30 + minute() * 0.5 - 90) * 100 };
+
     // draw clock hands
     stroke(255);
     strokeWeight(4);
